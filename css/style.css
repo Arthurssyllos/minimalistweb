@@ -1,0 +1,99 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Aplicando a fonte Roboto */
+}
+  
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://c.wallhere.com/photos/bc/4f/vaporwave_sunset_space_synthwave_Moon_Purple_atmosphere_purple_background_CGI-2242516.jpg!d');
+    background-size: cover; /* Tornando a imagem adaptativa */
+    background-position: center; /* Centralizando a imagem */
+    z-index: -1;
+    animation: slide 30s linear infinite;
+}
+
+  
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Tornando o main ocupar toda a altura da tela */
+    padding: 0 20px; /* Adicionando espaçamento aos lados */
+    text-align: center; /* Centralizando o texto */
+}
+
+.title {
+    font-size: 48px;
+    color: transparent; /* Tornando o texto transparente */
+    margin-bottom: 20px;
+    background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)); /* Adicionando gradiente ao texto */
+    -webkit-background-clip: text; /* Definindo a área do texto onde o fundo será aplicado */
+    background-clip: text; /* Definindo a área do texto onde o fundo será aplicado */
+}
+
+.subtitle {
+    font-size: 24px;
+    color: transparent; /* Tornando o texto transparente */
+    margin-bottom: 40px;
+    background-image: linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.7)); /* Adicionando gradiente ao texto */
+    -webkit-background-clip: text; /* Definindo a área do texto onde o fundo será aplicado */
+    background-clip: text; /* Definindo a área do texto onde o fundo será aplicado */
+}
+
+
+/* === removing default button style ===*/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #ff00ff; /* Nova cor de fundo do botão - um tom de rosa vibrante */
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+/* Cor do efeito de neon quando o botão é hover */
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: #ff00ff; /* Cor do texto para o efeito de neon */
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid #ff00ff; /* Mesma cor para a borda direita */
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px #ff00ff; /* Mesma cor para o contorno */
+}
+  /* hover */
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }

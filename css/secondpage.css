@@ -1,0 +1,119 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Aplicando a fonte Roboto */
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://w.forfun.com/fetch/f7/f7211a292a2a8044fbf9d90171ffe2c9.jpeg');
+    background-size: cover; /* Tornando a imagem adaptativa */
+    background-position: center; /* Centralizando a imagem */
+    z-index: -1;
+    animation: slide 30s linear infinite;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Tornando o main ocupar toda a altura da tela */
+    padding: 0 20px; /* Adicionando espaçamento aos lados */
+    text-align: center; /* Centralizando o texto */
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    margin-top: 40px; /* Ajustando a margem superior para mover o título para baixo */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)); /* Gradiente escuro */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adicionando sombra ao texto */
+}
+
+.subtitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+    margin-top: -10px; /* Ajustando a margem superior para mover o subtítulo para baixo */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)); /* Gradiente escuro */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adicionando sombra ao texto */
+}
+
+/*
+.content {
+    font-size: 18px;
+    margin-top: 100px; // Ajustando a margem superior para mover o conteúdo para baixo 
+    margin-bottom: 40px; // Ajustando a margem inferior para alinhar o botão 
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)); // Gradiente escuro 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); // Adicionando sombra ao texto 
+} */
+
+
+/* Estilos do botão */
+.button {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.7);
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    text-decoration: none;
+  }
+  
+  .button:focus,
+  .button:hover {
+    color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .button:focus:after,
+  .button:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  .button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: transparent; /* Alterado para transparente */
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left, background-color; /* Adicionado background-color */
+  }
+  
+  .button:focus:after,
+  .button:hover:after {
+    width: 100%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.7); /* Alterado para branco */
+  }
+  
